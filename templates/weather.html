@@ -19,14 +19,21 @@
     </div>
     <div class="weather-content">
         <p>
-            <span class="city">{{ holder.city }} Weather</span>
+            <div class="city-container">
+                <span class="city">{{ holder.city }}, {{ holder.country }} Weather</span>
+            </div>
             <br>
             <div class="img-container">
                 <img src="http://openweathermap.org/img/w/{{ holder.icon }}.png" alt="weather icon" class="icon">
             </div>
             <br>
-            <span class="temperature">{{ holder.temperature }}</span>
-            <br> {{ holder.description }}
+            <div class="temp-container">
+                <span class="display-temp">{{ holder.temperature }}° C</span>
+                <br><br> 
+            </div>
+            <div class="info-container">
+                <p class="display-info">{{ holder.description }}</p>
+            </div>
         </p>
     </div>
 </body>

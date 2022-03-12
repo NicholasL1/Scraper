@@ -28,6 +28,7 @@ def index():
         'temperature': round(info['main']['temp']),
         'description': info['weather'][0]['description'].title(),
         'icon': info['weather'][0]['icon'],
+        'country': info['sys']['country'],
     }
 
     return render_template('weather.html', holder=holder)
