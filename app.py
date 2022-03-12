@@ -31,7 +31,7 @@ def index():
     }
     print(holder)
 
-    return render_template('weather.html')
+    return render_template('weather.html', holder=holder)
 
 
 if __name__ == "__main__":

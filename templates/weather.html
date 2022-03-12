@@ -1,5 +1,28 @@
 {% extends "base.html" %}
 {% block title %}Home Page{% endblock %}
 {% block content%}
-<h1>Weather</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <form class="display" action="#" style="margin: auto; max-width: 300px; margin-top: 100px;">
+        <input name="search-box" type="text" placeholder="Search City...">
+        <button type="submit">Search</button>
+    </form>
+    <div class="weather-content">
+        <p>
+            <span class="city">{{ holder.city }} Weather</span>
+            <br>
+            <span class="temperature">{{ holder.temperature }}</span>
+            <br> {{ holder.description }}
+        </p>
+    </div>
+</body>
+</html>
 {% endblock %}
