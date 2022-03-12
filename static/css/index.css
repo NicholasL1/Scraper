@@ -14,22 +14,25 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #9ed0f1;
+  background-image: url("backgroundimage.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.title-container {
+.description {
+  align-items: center;
   text-align: center;
-  width: 510px;
-  border-bottom: solid 1px #3a3a3c;
+  height: 90vh;
+  line-height: 100px;
 }
 
-.tile-container {
-  width: 330px;
-  margin-bottom: 30px;
-}
-
-.key-container {
-  width: 510px;
-  display: flex;
-  flex-wrap: wrap;
+.text {
+  color: #0f0404;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  margin-left: 250px;
+  margin-right: 250px;
+  margin-top: 325px;
 }

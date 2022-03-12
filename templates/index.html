@@ -1,5 +1,22 @@
 {% extends "base.html" %}
 {% block title %}Home Page{% endblock %}
 {% block content%}
-<h1>Test</h1>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ABOUT</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    </head>
+    <body>
+        <div class="description">
+             <h1 class="text">
+                This web application uses an OpenWeather API to scrape weather information about any city in the world. 
+                It uses python and Flask to deploy the application, as well as html and css to present it.
+            </h1>
+        </div>
+    </body>
+</html>
 {% endblock %}
