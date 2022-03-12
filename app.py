@@ -29,6 +29,7 @@ def index():
         'description': info['weather'][0]['description'].title(),
         'icon': info['weather'][0]['icon'],
         'country': info['sys']['country'],
+        'feels': round(info['main']['feels_like']),
     }
 
     return render_template('weather.html', holder=holder)

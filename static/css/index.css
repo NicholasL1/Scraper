@@ -75,17 +75,17 @@ form.display button:hover {
   background-size: cover;
 }
 
+.city-container {
+  text-align: center;
+  height: 20px;
+}
+
 .city {
   color: rgb(0, 0, 0);
-  margin-left: 20px;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 500;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-
-.city-container {
-  margin-top: 20px;
 }
 
 .icon {
@@ -96,15 +96,14 @@ form.display button:hover {
 .img-container {
   margin-left: 0px;
   float: left;
-  margin-top: -50px;
   height: 100px;
 }
 
 .temp-container {
   float: left;
-  margin-left: 150px;
+  margin-left: 160px;
   text-align: center;
-  margin-top: -28px;
+  margin-top: 20px;
   height: 50px;
 }
 
@@ -124,7 +123,9 @@ form.display button:hover {
 }
 
 .info-container {
-  margin-top: 100px;
+  text-align: center;
+  margin-top: 160px;
   height: 20px;
-  margin-left: 15px;
+  text-align: center;
+  width: 100%;
 }
