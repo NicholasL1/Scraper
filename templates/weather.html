@@ -11,13 +11,19 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 </head>
 <body>
-    <form class="display" action="#" style="margin: auto; max-width: 300px; margin-top: 100px;">
-        <input name="search-box" type="text" placeholder="Search City...">
-        <button type="submit">Search</button>
-    </form>
+    <div>
+        <form class="display" action="#" style="margin: auto; max-width: 300px; margin-top: 100px;">
+            <input name="search-box" type="text" placeholder="Search City...">
+            <button type="submit">Search</button>
+        </form>
+    </div>
     <div class="weather-content">
         <p>
             <span class="city">{{ holder.city }} Weather</span>
+            <br>
+            <div class="img-container">
+                <img src="http://openweathermap.org/img/w/{{ holder.icon }}.png" alt="weather icon" class="icon">
+            </div>
             <br>
             <span class="temperature">{{ holder.temperature }}</span>
             <br> {{ holder.description }}

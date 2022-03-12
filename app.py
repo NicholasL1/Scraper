@@ -25,14 +25,12 @@ def index():
 
     holder = {
         'city': city,
-        'temperature': info['main']['temp'],
-        'description': info['weather'][0]['description'],
+        'temperature': round(info['main']['temp']),
+        'description': info['weather'][0]['description'].title(),
         'icon': info['weather'][0]['icon'],
     }
-    print(holder)
 
     return render_template('weather.html', holder=holder)
-
 
 if __name__ == "__main__":
     app.run(debug=True)
