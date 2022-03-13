@@ -22,11 +22,11 @@ Now you can install the necessary packages with:
 ### `pip install -r requirements.txt`
 
 If that doesn't work, you can try installing the packages individually:
-### `pip install flask requests datetime`
+`pip install flask requests datetime`
 or
-### `pip install flask`
-### `pip install requests`
-### `pip install datetime`
+`pip install flask`
+`pip install requests`
+`pip install datetime`
 
 You can now run the app with: 
 
@@ -37,3 +37,4 @@ You can now run the app with:
 ![Screen Shot 2022-03-13 at 3 07 03 AM](https://user-images.githubusercontent.com/77363160/158049214-71e29a29-b601-421e-be99-ec10d9d7d12b.png)
 ![Screen Shot 2022-03-13 at 3 07 27 AM](https://user-images.githubusercontent.com/77363160/158049216-cd5294b6-291a-466c-b550-076259cf1a41.png)
 
+## Check out OpenWeatherMaps for more APIs: https://openweathermap.org
