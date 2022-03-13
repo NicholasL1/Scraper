@@ -23,7 +23,7 @@
                 <span class="city">{{ holder.city }}, {{ holder.country }} Weather</span>
             </div>
             <br>
-            <div>
+            <div class="big-info">
                 <div class="img-container">
                     <img src="http://openweathermap.org/img/w/{{ holder.icon }}.png" alt="weather icon" class="icon">
                 </div>
@@ -32,9 +32,20 @@
                     <span class="display-temp">{{ holder.temperature }}°C</span>
                     <br><br> 
                 </div>
-                <div class="info-container">
-                    <p class="display-info">Feels like {{ holder.feels }}°C. {{ holder.description }}.</p>
-                </div>
+            </div>
+            <div class="small-info">
+                <p class="display-info">Date: {{ holder.date }}</p>
+            </div>
+            <div class="extra">
+                <p class="extrastuff"> 
+                    Sunrise: {{ holder.sunrise }}&emsp;&emsp;&nbsp;&nbsp;Sunset: {{ holder.sunset }} <br/>
+                    Min: {{ holder.tempmin }}°C&emsp;&emsp;&ensp;&nbsp;Max: {{ holder.tempmax }}°C <br/>
+                    Humidity: {{ holder.humidity }}%&emsp;&emsp;Pressure: {{ holder.pressure }}hPa <br/>
+                    Wind: {{ holder.wind }}km/h&emsp;&emsp;&ensp;Visibility: {{ holder.visibility }}km
+                </p>
+            </div>
+            <div class="info-container">
+                <p class="display-info">Feels like {{ holder.feels }}°C. {{ holder.description }}.</p>
             </div>
         </p>
     </div>
