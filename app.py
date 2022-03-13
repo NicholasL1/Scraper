@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request
 from bs4 import BeautifulSoup as soup
 import requests
 from datetime import datetime
@@ -20,7 +20,12 @@ def home():
 @app.route('/weather', methods=["POST", "GET"])
 def index():
     url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=308c52fb7d9fcbf8bb5484efe08e579e'
-    city = 'Toronto'
+    
+    if request.method == "POST":
+        city = request.form['search-box']
+
+    else:
+        city = 'Toronto'
 
     info = requests.get(url.format(city)).json()
 
