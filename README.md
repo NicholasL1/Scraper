@@ -16,21 +16,21 @@ The front end of the application is designed in html and css, using a bootstrap 
 To run this project please use the following commands:
 
 To make sure the latest version of pip is installed, run 
-### pip3 install --upgrade pip
+### `pip3 install --upgrade pip`
 
 Now you can install the necessary packages with:
-### pip install -r requirements.txt
+### `pip install -r requirements.txt`
 
 If that doesn't work, you can try installing the packages individually:
-### pip install flask requests datetime
+### `pip install flask requests datetime`
 or
-###pip install flask
-###pip install requests
-###pip install datetime
+### `pip install flask`
+### `pip install requests`
+### `pip install datetime`
 
 You can now run the app with: 
 
-###python app.py
+### `python app.py`
 
 ![Screen Shot 2022-03-13 at 3 06 30 AM](https://user-images.githubusercontent.com/77363160/158049193-06e6cd64-d872-48a5-ad3b-c3b1de44608b.png)
 ![Screen Shot 2022-03-13 at 3 05 54 AM](https://user-images.githubusercontent.com/77363160/158049206-380a18a9-d09a-4de9-ba9e-892e9194f2d0.png)
