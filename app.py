@@ -20,10 +20,14 @@ def home():
 @app.route('/weather', methods=["POST", "GET"])
 def index():
     url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=308c52fb7d9fcbf8bb5484efe08e579e'
+    error = ""
     
     if request.method == "POST":
-        city = request.form['search-box']
-
+        if request.form('search-box').strip():
+            city = request.form['search-box']
+        elif:
+            city = 'Toronto'
+            error = "Please enter a valid city!"
     else:
         city = 'Toronto'
 
