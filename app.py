@@ -1,15 +1,6 @@
 from flask import Flask, render_template, url_for, request
-from bs4 import BeautifulSoup as soup
 import requests
 from datetime import datetime
-
-
-# with open("templates/index.html", "r") as f:
-#     doc = soup(f, "html.parser")
-#     word = doc.find("div", class_="tile-container")
-
-# print (word.string)
-
 
 app = Flask(__name__)
 
@@ -20,14 +11,15 @@ def home():
 @app.route('/weather', methods=["POST", "GET"])
 def index():
     url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=308c52fb7d9fcbf8bb5484efe08e579e'
-    error = ""
+    city = 'Toronto'
+    error = ''
     
     if request.method == "POST":
-        if request.form('search-box').strip():
+        if len(request.form['search-box'].split()) > 0:
             city = request.form['search-box']
-        elif:
+        else:
             city = 'Toronto'
-            error = "Please enter a valid city!"
+            error = 'Please enter a valid city!'
     else:
         city = 'Toronto'
 
@@ -58,7 +50,7 @@ def index():
         'visibility': info['visibility']/10000,
     }
 
-    return render_template('weather.html', holder=holder)
+    return render_template('weather.html', holder=holder, error=error)
 
 if __name__ == "__main__":
     app.run(debug=True)
