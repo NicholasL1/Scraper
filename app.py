@@ -20,7 +20,7 @@ def home():
 @app.route('/weather')
 def index():
     url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=308c52fb7d9fcbf8bb5484efe08e579e'
-    city = 'Brampton'
+    city = 'Toronto'
 
     info = requests.get(url.format(city)).json()
 
@@ -32,7 +32,7 @@ def index():
     night = sunsettime.split()
 
     holder = {
-        'city': city,
+        'city': info['name'],
         'temperature': round(info['main']['temp']),
         'description': info['weather'][0]['description'].title(),
         'icon': info['weather'][0]['icon'],
