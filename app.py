@@ -15,15 +15,16 @@ def index():
     error = ''
     
     if request.method == "POST":
-        if len(request.form['search-box'].split()) > 0:
-            city = request.form['search-box']
-        else:
+        if requests.get(url.format(request.form['search-box'])).json()['cod'] == '404':
             city = 'Toronto'
-            error = 'Please enter a valid city!'
+            error = 'Please enter a valid city!'        
+        else:
+            city = request.form['search-box']
     else:
         city = 'Toronto'
 
     info = requests.get(url.format(city)).json()
+    print(info)
 
     sunrisetime = datetime.utcfromtimestamp(int(info['sys']['sunrise'])).strftime('%Y-%m-%d %H:%M') #Getting UTC timestamp and converting to date and time
     today = sunrisetime.split() #Splitting date and time into an array with two elements
