@@ -24,7 +24,6 @@ def index():
         city = 'Toronto'
 
     info = requests.get(url.format(city)).json()
-    print(info)
 
     sunrisetime = datetime.utcfromtimestamp(int(info['sys']['sunrise'])).strftime('%Y-%m-%d %H:%M') #Getting UTC timestamp and converting to date and time
     today = sunrisetime.split() #Splitting date and time into an array with two elements
