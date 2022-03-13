@@ -17,7 +17,7 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route('/weather')
+@app.route('/weather', methods=["POST", "GET"])
 def index():
     url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=308c52fb7d9fcbf8bb5484efe08e579e'
     city = 'Toronto'
